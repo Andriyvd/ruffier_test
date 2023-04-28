@@ -3,12 +3,14 @@ from PyQt5.QtGui import QFont
 from PyQt5.QtWidgets import QApplication, QWidget, QHBoxLayout, QVBoxLayout, QLabel, QPushButton, QLineEdit
 from instr import *
 from final_win import *
+
 class Experiment():
     def __init__(self, age, test1, test2, test3):
         self.age = age
         self.t1 = test1
         self.t2 = test2
         self.t3 = test3
+        
 class TestWin(QWidget):
     def __init__(self):
         super().__init__()
