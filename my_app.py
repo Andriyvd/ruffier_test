@@ -1,5 +1,6 @@
-from PyQt5.QtCore import Qt
-from PyQt5.QtWidgets import QApplication, QWidget, QHBoxLayout, QVBoxLayout, QLabel, QPushButton
+from PyQt5.QtCore import Qt, QTime, QTimer, QLocale
+from PyQt5.QtGui import QFont, QDoubleValidator, QIntValidator
+from PyQt5.QtWidgets import QApplication, QWidget, QHBoxLayout, QVBoxLayout, QLabel, QPushButton, QLineEdit, QGridLayout, QGroupBox, QRadioButton, QListWidget
 from instr import *
 from second_win import *
 
@@ -20,7 +21,7 @@ class MainWin(QWidget):
         self.layout_line.addWidget(self.btn_next, alignment=Qt.AlignCenter)
         self.setLayout(self.layout_line)
     def next_click(self):
-        self.tw = TestWin
+        self.tw = TestWin()
         self.hide()
     def connects(self):
         self.btn_next.clicked.connect(self.next_click)
