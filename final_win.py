@@ -4,7 +4,7 @@ from PyQt5.QtWidgets import (QApplication, QWidget, QHBoxLayout, QVBoxLayout,QGr
 from instr import *
 
 class FinalWin(QWidget):
-    def __init__(self):
+    def __init__(self, exp):
         super().__init__()
         self.exp = exp
         self.initUI()
@@ -14,7 +14,7 @@ class FinalWin(QWidget):
         if self.exp.age < 7:
             self.index = 0
             return "немає даних для такого віку"
-        self.index = (4 * (self.exp.t1) + (self.exp.t2) + (self.exp.t3) - 200) / 10
+        self.index = (4 * int((self.exp.t1)) + int((self.exp.t2)) + int((self.exp.t3)) - 200) / 10
         if self.exp.age == 7 or self.exp.age == 8:
             if self.index >= 21:
                 return txt_res1
